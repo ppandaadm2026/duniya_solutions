@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Duniya Solutions provides IT services, Oracle technology solutions, GenAI and chatbot development, and hands-on technology training." />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Duniya Solutions | IT Services & Technology Training</title>
+  <style>
+    :root {
+      --bg: #f7f9fc; --ink: #101828; --muted: #667085; --navy: #0b1220;
+      --blue: #326bff; --cyan: #35c6d5; --line: #e5eaf2; --white: #fff;
+      --soft: #edf3ff; --shadow: 0 18px 55px rgba(16,24,40,.09);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, calc(100% - 44px)); margin: 0 auto; }
+    .nav-wrap { position: sticky; top: 0; z-index: 20; background: rgba(11,18,32,.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,.1); }
+    nav { height: 76px; display: flex; align-items: center; justify-content: space-between; color: white; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.4px; font-size: 20px; }
+    .brand-mark { width: 44px; height: 44px; flex: 0 0 44px; filter: drop-shadow(0 7px 15px rgba(50,107,255,.35)); overflow: visible; } .brand em { color:#ffad55; font-style:normal; }
+    .nav-links { display: flex; align-items: center; gap: 29px; font-size: 13px; color: #d4dbea; }
+    .nav-links a:hover { color: white; }
+    .nav-cta { padding: 10px 17px; border-radius: 999px; background: white; color: var(--navy)!important; font-weight: 750; }
+    .menu-btn { display: none; border: 1px solid #344054; color: white; background: transparent; border-radius: 10px; padding: 8px 11px; font-size: 20px; }
+    .hero { position: relative; overflow: hidden; background: radial-gradient(circle at 82% 25%,rgba(53,198,213,.2),transparent 25%), radial-gradient(circle at 12% 95%,rgba(50,107,255,.22),transparent 30%), var(--navy); color: white; padding: 100px 0 104px; }
+    .hero:after { content:""; position:absolute; width:560px; height:560px; border:1px solid rgba(255,255,255,.08); border-radius:50%; right:-150px; top:-260px; box-shadow:0 0 0 45px rgba(255,255,255,.018),0 0 0 95px rgba(255,255,255,.014); }
+    .hero-grid { display:grid; grid-template-columns: 1.12fr .88fr; gap:55px; align-items:center; position:relative; z-index:1; }
+    .eyebrow { display:inline-flex; align-items:center; gap:9px; color:#a9c3ff; font-size:12px; text-transform:uppercase; letter-spacing:1.8px; font-weight:800; }
+    .eyebrow:before { content:""; width:25px; height:2px; background:var(--cyan); }
+    h1 { font-size: clamp(42px,6vw,68px); line-height:1.05; letter-spacing:-2.8px; margin:22px 0; max-width:720px; }
+    h1 span { background:linear-gradient(90deg,#8eafff,#52d8df); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .hero p { color:#bdc8d9; font-size:17px; max-width:610px; margin:0 0 30px; }
+    .actions { display:flex; gap:13px; flex-wrap:wrap; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:13px 20px; border-radius:999px; font-weight:750; font-size:14px; transition:.2s; }
+    .btn-primary { background:linear-gradient(110deg,var(--blue),#4a8cff); color:white; box-shadow:0 12px 28px rgba(50,107,255,.3); }
+    .btn-primary:hover { transform:translateY(-2px); }
+    .btn-outline { border:1px solid #526078; color:white; }
+    .hero-note { margin-top:27px; color:#93a2b9; font-size:12px; }
+    .visual { min-height:360px; position:relative; display:grid; place-items:center; }
+    .orbit { width:310px; height:310px; border:1px solid rgba(255,255,255,.18); border-radius:50%; display:grid; place-items:center; position:relative; }
+    .orbit:before,.orbit:after { content:""; position:absolute; border:1px dashed rgba(255,255,255,.15); border-radius:50%; }
+    .orbit:before { inset:28px; } .orbit:after { inset:65px; }
+    .core { width:126px; height:126px; border-radius:35px; background:linear-gradient(145deg,#3978ff,#26bacb); display:grid; place-items:center; font-size:34px; font-weight:900; box-shadow:0 20px 65px rgba(40,126,255,.45); transform:rotate(-8deg); }
+    .float-card { position:absolute; padding:13px 16px; background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.17); backdrop-filter:blur(12px); border-radius:14px; color:#e8efff; font-size:12px; box-shadow:0 12px 35px rgba(0,0,0,.15); }
+    .float-card b { display:block; font-size:14px; color:white; margin-bottom:2px; }
+    .fc1 { top:27px; right:0; } .fc2 { bottom:30px; left:0; } .fc3 { bottom:4px; right:12px; }
+    .section { padding:88px 0; }
+    .section-head { max-width:680px; margin-bottom:38px; }
+    .kicker { color:var(--blue); font-size:12px; text-transform:uppercase; letter-spacing:1.7px; font-weight:850; }
+    h2 { font-size:clamp(30px,4vw,43px); letter-spacing:-1.5px; line-height:1.15; margin:12px 0 14px; }
+    .section-head p { color:var(--muted); margin:0; font-size:16px; }
+    .services { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .service { background:white; border:1px solid var(--line); border-radius:var(--radius); padding:26px; box-shadow:0 5px 20px rgba(16,24,40,.025); transition:.2s; }
+    .service:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+    .service-icon { width:48px; height:48px; border-radius:15px; background:var(--soft); color:var(--blue); display:grid; place-items:center; font-size:22px; margin-bottom:20px; }
+    .service h3 { margin:0 0 9px; font-size:18px; letter-spacing:-.3px; }
+    .service p { color:var(--muted); font-size:14px; margin:0; }
+    .service ul { padding-left:18px; margin:14px 0 0; color:#475467; font-size:13px; }
+    .split { background:white; }
+    .split-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; align-items:center; }
+    .statement { background:linear-gradient(145deg,#0b1220,#172b4d); color:white; border-radius:28px; padding:34px; min-height:340px; position:relative; overflow:hidden; }
+    .statement:after { content:"DS"; position:absolute; right:-6px; bottom:-60px; font-size:190px; font-weight:900; color:rgba(255,255,255,.045); letter-spacing:-15px; }
+    .statement .quote { font-size:28px; line-height:1.25; font-weight:750; letter-spacing:-.8px; position:relative; z-index:1; margin-top:25px; }
+    .statement small { color:#aebbd0; position:relative; z-index:1; }
+    .check-list { display:grid; gap:17px; margin-top:26px; }
+    .check { display:flex; gap:13px; align-items:flex-start; }
+    .check-mark { flex:0 0 25px; width:25px; height:25px; border-radius:50%; background:#e8f8f8; color:#078b98; display:grid; place-items:center; font-size:13px; font-weight:900; }
+    .check b { display:block; margin-bottom:2px; } .check span { color:var(--muted); font-size:14px; }
+    .tech { background:#f0f4fb; }
+    .tech-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .tech-card { background:white; border:1px solid var(--line); border-radius:20px; padding:23px; }
+    .tech-card h3 { margin:0 0 14px; font-size:16px; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; }
+    .tag { background:#f3f6fb; border:1px solid #e7ecf4; border-radius:999px; padding:7px 11px; font-size:12px; color:#344054; font-weight:650; }
+    .tag.oracle { background:#fff1ef; border-color:#ffd8d2; color:#b42318; }
+    .training { background:var(--navy); color:white; }
+    .training .section-head p { color:#aebbd0; }
+    .training-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .course { border:1px solid #2c3a52; background:#121e31; border-radius:18px; padding:21px; }
+    .course .num { color:#6d9bff; font-size:12px; font-weight:850; letter-spacing:1px; }
+    .course h3 { font-size:16px; margin:12px 0 7px; }
+    .course p { color:#aebbd0; font-size:13px; margin:0; }
+    .training .kicker { color:#79a1ff; }
+    .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; counter-reset:step; }
+    .process { border-top:2px solid #dce5f5; padding-top:17px; }
+    .process:before { counter-increment:step; content:"0" counter(step); color:var(--blue); font-weight:850; font-size:12px; letter-spacing:1px; }
+    .process h3 { font-size:16px; margin:10px 0 6px; }
+    .process p { color:var(--muted); font-size:13px; margin:0; }
+    .contact { background:linear-gradient(135deg,#eaf1ff,#effbfc); }
+    .contact-box { display:flex; align-items:center; justify-content:space-between; gap:30px; background:white; border:1px solid #e1e9f5; border-radius:26px; padding:36px; box-shadow:var(--shadow); }
+    .contact-box h2 { font-size:34px; margin:8px 0; }
+    .contact-box p { color:var(--muted); margin:0; max-width:560px; }
+    footer { background:#080e19; color:#b5c0d0; padding:28px 0; font-size:12px; }
+    .footer-inner { display:flex; justify-content:space-between; align-items:center; gap:18px; }
+    .footer-brand { color:white; font-weight:800; font-size:15px; }
+
+    /* Brand motion and compact expertise strip */
+    .brand-mark { animation: logoFloat 5s ease-in-out infinite; }
+    .hero .eyebrow { animation: fadeUp .7s both; }
+    .hero h1 { animation: fadeUp .85s .08s both; }
+    .hero p, .hero .actions { animation: fadeUp .9s .16s both; }
+    .orbit { animation: orbitFloat 7s ease-in-out infinite; }
+    .orbit:before { animation: spin 24s linear infinite; }
+    .orbit:after { animation: spin 18s linear infinite reverse; }
+    .core { animation: coreGlow 3.5s ease-in-out infinite alternate; }
+    .float-card { animation: cardFloat 5s ease-in-out infinite; }
+    .fc2 { animation-delay: -1.6s; } .fc3 { animation-delay: -3s; }
+    .expertise-strip { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; }
+    .expertise-item { min-height:112px; border:1px solid #dce5f2; background:rgba(255,255,255,.86); border-radius:17px; padding:17px 12px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:9px; text-align:center; transition:transform .25s,box-shadow .25s,border-color .25s; }
+    .expertise-item:hover { transform:translateY(-5px); box-shadow:0 13px 30px rgba(16,24,40,.09); border-color:#9bb8ff; }
+    .expertise-item b { font-size:12px; line-height:1.35; }
+    .expertise-icon { font-size:25px; color:#326bff; line-height:1; }
+    .oracle-item { background:#fff7f5; border-color:#ffd1c9; box-shadow:inset 0 0 0 1px rgba(180,35,24,.04); }
+    .oracle-word { color:#c62828; font-weight:900; font-size:21px; letter-spacing:-1.2px; line-height:1; }
+    .oracle-service { border-color:#ffd1c9; background:linear-gradient(145deg,#fff,#fff8f6); }
+    .oracle-service .service-icon { background:#fff0ed; color:#c62828; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes orbitFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-11px); } }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    @keyframes logoFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-2px); } }
+    @keyframes coreGlow { from { box-shadow:0 15px 45px rgba(40,126,255,.3); } to { box-shadow:0 20px 70px rgba(53,198,213,.55); } }
+    @keyframes cardFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-7px); } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }
+    }
+
+    @media (max-width:900px) {
+      .hero-grid,.split-grid { grid-template-columns:1fr; gap:30px; }
+      .visual { min-height:330px; }
+      .services { grid-template-columns:repeat(2,1fr); }
+      .expertise-strip { grid-template-columns:repeat(3,1fr); }
+      .training-grid { grid-template-columns:repeat(2,1fr); }
+      .split-grid { gap:35px; }
+    }
+    @media (max-width:640px) {
+      .container { width:min(100% - 32px,1160px); }
+      nav { height:68px; }
+      .menu-btn { display:block; }
+      .nav-links { display:none; position:absolute; top:68px; left:0; right:0; padding:18px 22px 22px; background:#0b1220; flex-direction:column; align-items:stretch; gap:18px; border-top:1px solid #26344a; }
+      .nav-links.open { display:flex; }
+      .nav-cta { text-align:center; }
+      .hero { padding:72px 0 65px; }
+      h1 { letter-spacing:-1.8px; }
+      .hero p { font-size:15px; }
+      .visual { transform:scale(.88); margin:-10px -20px; }
+      .section { padding:66px 0; }
+      .services,.tech-grid,.training-grid,.process-grid { grid-template-columns:1fr; }
+      .expertise-strip { grid-template-columns:repeat(2,1fr); }
+      .contact-box { align-items:flex-start; flex-direction:column; padding:26px; }
+      .contact-box h2 { font-size:29px; }
+      .footer-inner { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <nav class="container">
+      <a class="brand" href="#home" aria-label="Duniya Solutions home"><svg class="brand-mark" viewBox="0 0 52 52" role="img" aria-label="Duniya Solutions logo">
+        <defs><linearGradient id="logoBlue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55d9e8"/><stop offset="1" stop-color="#326bff"/></linearGradient></defs>
+        <path d="M9 7h16c13 0 21 8 21 19S38 45 25 45H9l5-8h10c8 0 13-4 13-11S32 15 24 15h-5l-7 20-7 10 4-20z" fill="url(#logoBlue)"/>
+        <path d="M5 44c10-4 20-5 34-2-8 5-21 7-34 2z" fill="#ff9a32"/>
+      </svg><span>Duniya <em>Solutions</em></span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a><a href="#technology">Technology</a><a href="#training">Training</a><a href="#approach">Our Approach</a><a class="nav-cta" href="#contact">Let's Talk <span>↗</span></a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Technology • Talent • Transformation</div>
+          <h1>Build smarter.<br><span>Grow faster.</span></h1>
+          <p>Duniya Solutions is a software and IT services company helping businesses turn ideas into reliable digital solutions — while building the technology skills teams need for what comes next.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Discuss a project <span>↗</span></a>
+            <a class="btn btn-outline" href="#services">Explore our services <span>↓</span></a>
+          </div>
+          <div class="hero-note">Software Development&nbsp; · &nbsp;IT Consulting&nbsp; · &nbsp;Technology Training</div>
+        </div>
+        <div class="visual" aria-label="Technology illustration">
+          <div class="orbit"><div class="core">DS</div></div>
+          <div class="float-card fc1"><b>Software</b>Built for your business</div>
+          <div class="float-card fc2"><b>Data & AI</b>Turn data into decisions</div>
+          <div class="float-card fc3"><b>Learning</b>Skills for the future</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head"><div class="kicker">What we do</div><h2>Technology services that move your business forward.</h2><p>From a focused application to a modern data platform, we bring engineering, practical thinking and delivery discipline to every engagement.</p></div>
+        <div class="services">
+          <article class="service oracle-service"><div class="service-icon">◉</div><h3>Oracle Technology Services</h3><p>Enterprise database, application and cloud capabilities for reliable business systems.</p><ul><li>Oracle Database, SQL and PL/SQL</li><li>Oracle APEX and database development</li><li>Oracle Cloud Infrastructure (OCI)</li></ul></article>
+          <article class="service"><div class="service-icon">⌘</div><h3>Custom Software Development</h3><p>Design and build secure, scalable applications tailored to your workflows and customers.</p><ul><li>Web & mobile applications</li><li>Backend systems and APIs</li><li>Product development and modernization</li></ul></article>
+          <article class="service"><div class="service-icon">▤</div><h3>Data Engineering & Analytics</h3><p>Build dependable data foundations that make information useful, accessible and actionable.</p><ul><li>ETL / ELT pipelines and data warehouses</li><li>Database design and optimization</li><li>Dashboards, reporting and KPIs</li></ul></article>
+          <article class="service"><div class="service-icon">☁</div><h3>Cloud & DevOps</h3><p>Modernize infrastructure and streamline delivery with automation and cloud-native practices.</p><ul><li>AWS, Microsoft Azure and OCI</li><li>Docker, CI/CD and Terraform</li><li>Monitoring, reliability and security</li></ul></article>
+          <article class="service"><div class="service-icon">✧</div><h3>GenAI & Chatbot Solutions</h3><p>Build intelligent conversational experiences and AI-powered workflows that help customers and teams get more done.</p><ul><li>AI chatbots and virtual assistants</li><li>LLM, RAG and knowledge-base solutions</li><li>Workflow automation and AI integrations</li></ul></article>
+          <article class="service"><div class="service-icon">⇄</div><h3>IT Consulting & Integration</h3><p>Get experienced engineering guidance to make sound architecture and technology decisions.</p><ul><li>Solution architecture</li><li>API and enterprise integration</li><li>Technical assessments and support</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split" id="approach">
+      <div class="container split-grid">
+        <div class="statement"><div class="eyebrow">The Duniya approach</div><div class="quote">Good technology should solve today's problems and create tomorrow's opportunities.</div><p style="color:#b8c6db;max-width:310px;margin-top:20px;position:relative;z-index:1">We combine engineering experience with a learning mindset to deliver outcomes that last.</p><small>— Duniya Solutions</small></div>
+        <div><div class="kicker">Why work with us</div><h2>Practical expertise.<br>Thoughtful delivery.</h2><p style="color:var(--muted)">We focus on understanding the business first, choosing the right tools second, and delivering measurable value throughout the journey.</p>
+          <div class="check-list">
+            <div class="check"><div class="check-mark">✓</div><div><b>End-to-end engineering</b><span>From discovery and architecture through development, deployment and support.</span></div></div>
+            <div class="check"><div class="check-mark">✓</div><div><b>Modern, proven technologies</b><span>Solutions shaped around the right platform, not a one-size-fits-all stack.</span></div></div>
+            <div class="check"><div class="check-mark">✓</div><div><b>Learning built into delivery</b><span>Knowledge sharing and hands-on training help teams grow with the solution.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tech" id="technology">
+      <div class="container">
+        <div class="section-head"><div class="kicker">Our expertise</div><h2>Technology that creates real-world impact.</h2><p>Enterprise platforms, modern engineering and intelligent solutions — delivered with practical expertise.</p></div>
+        <div class="expertise-strip">
+          <div class="expertise-item oracle-item"><span class="oracle-word">ORACLE</span><b>Oracle Technologies</b></div>
+          <div class="expertise-item"><span class="expertise-icon">✧</span><b>GenAI & Chatbots</b></div>
+          <div class="expertise-item"><span class="expertise-icon">⌘</span><b>Application Development</b></div>
+          <div class="expertise-item"><span class="expertise-icon">▤</span><b>Data Engineering</b></div>
+          <div class="expertise-item"><span class="expertise-icon">☁</span><b>Cloud & DevOps</b></div>
+          <div class="expertise-item"><span class="expertise-icon">◎</span><b>Technology Training</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section training" id="training">
+      <div class="container">
+        <div class="section-head"><div class="kicker">Learn with Duniya</div><h2>Practical technology training for real-world skills.</h2><p>Structured learning, hands-on exercises and project-oriented sessions for students, professionals and teams.</p></div>
+        <div class="training-grid">
+          <article class="course"><div class="num">01 / DEVELOPMENT</div><h3>Python & Full-Stack Development</h3><p>Python, Django, FastAPI, React, APIs and application building.</p></article>
+          <article class="course"><div class="num">02 / DATA</div><h3>Data Engineering</h3><p>SQL, ETL pipelines, Airflow, data warehousing and analytics.</p></article>
+          <article class="course"><div class="num">03 / CLOUD</div><h3>Cloud & DevOps</h3><p>AWS, Azure, OCI, Docker, CI/CD and infrastructure as code.</p></article>
+          <article class="course"><div class="num">04 / ENTERPRISE</div><h3>Oracle Technologies</h3><p>Oracle Database, SQL, PL/SQL and enterprise data concepts.</p></article>
+          <article class="course"><div class="num">05 / GENAI</div><h3>GenAI & Chatbot Development</h3><p>LLM applications, prompt engineering, RAG and conversational AI.</p></article>
+          <article class="course"><div class="num">06 / DATABASES</div><h3>Database Development</h3><p>Relational modeling, query writing, optimization and best practices.</p></article>
+          <article class="course"><div class="num">07 / CAREER</div><h3>Project-Based Learning</h3><p>Build portfolio-ready projects with practical engineering workflows.</p></article>
+          <article class="course"><div class="num">08 / TEAMS</div><h3>Corporate Training</h3><p>Customized workshops aligned to your team's tools and goals.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><div class="kicker">How we work</div><h2>A clear path from idea to impact.</h2><p>Transparent collaboration keeps the work focused and the outcomes aligned with your goals.</p></div>
+        <div class="process-grid">
+          <div class="process"><h3>Understand</h3><p>We learn about your goals, users, challenges and constraints.</p></div>
+          <div class="process"><h3>Design</h3><p>We define the solution, architecture, roadmap and delivery plan.</p></div>
+          <div class="process"><h3>Build</h3><p>We develop, test and refine through focused feedback cycles.</p></div>
+          <div class="process"><h3>Enable</h3><p>We launch, support and share knowledge so your team can grow.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div><div class="kicker">Let's build something meaningful</div><h2>Have a project or training need?</h2><p>Tell us what you're planning. Let's explore how Duniya Solutions can help with your next software, data, cloud or learning initiative.</p></div>
+          <a class="btn btn-primary" href="mailto:ADD-YOUR-EMAIL-HERE">Start a conversation <span>↗</span></a>
+        </div>
+        <p style="text-align:center;color:#667085;font-size:12px;margin:16px 0 0">Before publishing, replace the email link with your official business email address.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div><div class="footer-brand">Duniya Solutions</div><div>Technology. Talent. Transformation.</div></div><div>© <span id="year"></span> Duniya Solutions. All rights reserved.</div></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
