@@ -21,7 +21,7 @@
     .nav-wrap { position: sticky; top: 0; z-index: 20; background: rgba(11,18,32,.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,.1); }
     nav { height: 76px; display: flex; align-items: center; justify-content: space-between; color: white; }
     .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.4px; font-size: 20px; }
-    .brand-mark { width: 44px; height: 44px; flex: 0 0 44px; filter: drop-shadow(0 7px 15px rgba(50,107,255,.35)); overflow: visible; } .brand em { color:#ffad55; font-style:normal; }
+    .brand { gap: 0; padding: 5px 10px; background: #fff; border-radius: 10px; }\n    .brand-logo { display:block; width: 190px; height: 54px; object-fit: contain; }
     .nav-links { display: flex; align-items: center; gap: 29px; font-size: 13px; color: #d4dbea; }
     .nav-links a:hover { color: white; }
     .nav-cta { padding: 10px 17px; border-radius: 999px; background: white; color: var(--navy)!important; font-weight: 750; }
@@ -96,10 +96,10 @@
     .contact-box p { color:var(--muted); margin:0; max-width:560px; }
     footer { background:#080e19; color:#b5c0d0; padding:28px 0; font-size:12px; }
     .footer-inner { display:flex; justify-content:space-between; align-items:center; gap:18px; }
-    .footer-brand { color:white; font-weight:800; font-size:15px; }
+    .footer-brand { display:inline-block; padding:4px 8px; background:#fff; border-radius:8px; }\n    .footer-brand img { display:block; width:170px; height:48px; object-fit:contain; }
 
     /* Brand motion and compact expertise strip */
-    .brand-mark { animation: logoFloat 5s ease-in-out infinite; }
+    .brand-logo { animation: logoFloat 5s ease-in-out infinite; }
     .hero .eyebrow { animation: fadeUp .7s both; }
     .hero h1 { animation: fadeUp .85s .08s both; }
     .hero p, .hero .actions { animation: fadeUp .9s .16s both; }
@@ -138,7 +138,7 @@
     }
     @media (max-width:640px) {
       .container { width:min(100% - 32px,1160px); }
-      nav { height:68px; }
+      nav { height:68px; }\n      .brand { padding: 3px 7px; }\n      .brand-logo { width: 155px; height: 44px; }
       .menu-btn { display:block; }
       .nav-links { display:none; position:absolute; top:68px; left:0; right:0; padding:18px 22px 22px; background:#0b1220; flex-direction:column; align-items:stretch; gap:18px; border-top:1px solid #26344a; }
       .nav-links.open { display:flex; }
@@ -159,11 +159,9 @@
 <body>
   <div class="nav-wrap">
     <nav class="container">
-      <a class="brand" href="#home" aria-label="Duniya Solutions home"><svg class="brand-mark" viewBox="0 0 52 52" role="img" aria-label="Duniya Solutions logo">
-        <defs><linearGradient id="logoBlue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#55d9e8"/><stop offset="1" stop-color="#326bff"/></linearGradient></defs>
-        <path d="M9 7h16c13 0 21 8 21 19S38 45 25 45H9l5-8h10c8 0 13-4 13-11S32 15 24 15h-5l-7 20-7 10 4-20z" fill="url(#logoBlue)"/>
-        <path d="M5 44c10-4 20-5 34-2-8 5-21 7-34 2z" fill="#ff9a32"/>
-      </svg><span>Duniya <em>Solutions</em></span></a>
+      <a class="brand" href="#home" aria-label="Duniya Solutions home">
+        <img class="brand-logo" src="assets/logo.svg" alt="Infinitum Dunia Solutions India LLP — Connecting Ideas | Building Possibilities" />
+      </a>
       <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
       <div class="nav-links" id="navLinks">
         <a href="#services">Services</a><a href="#technology">Technology</a><a href="#training">Training</a><a href="#approach">Our Approach</a><a class="nav-cta" href="#contact">Let's Talk <span>↗</span></a>
@@ -273,7 +271,7 @@
     </section>
   </main>
 
-  <footer><div class="container footer-inner"><div><div class="footer-brand">Duniya Solutions</div><div>Technology. Talent. Transformation.</div></div><div>© <span id="year"></span> Duniya Solutions. All rights reserved.</div></div></footer>
+  <footer><div class="container footer-inner"><div><div class="footer-brand"><img src="assets/logo.svg" alt="Infinitum Dunia Solutions India LLP" /></div><div>Technology. Talent. Transformation.</div></div><div>© <span id="year"></span> Duniya Solutions. All rights reserved.</div></div></footer>
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
