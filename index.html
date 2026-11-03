@@ -6,6 +6,8 @@
   <meta name="description" content="Duniya Solutions provides IT services, Oracle technology solutions, GenAI and chatbot development, and hands-on technology training." />
   <meta name="theme-color" content="#0b1220" />
   <title>Duniya Solutions | IT Services & Technology Training</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <style>
     :root {
       --bg: #f7f9fc; --ink: #101828; --muted: #667085; --navy: #0b1220;
@@ -21,7 +23,8 @@
     .nav-wrap { position: sticky; top: 0; z-index: 20; background: rgba(11,18,32,.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,.1); }
     nav { height: 76px; display: flex; align-items: center; justify-content: space-between; color: white; }
     .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.4px; font-size: 20px; }
-    .brand { gap: 0; padding: 5px 10px; background: #fff; border-radius: 10px; }\n    .brand-logo { display:block; width: 190px; height: 54px; object-fit: contain; }
+    .brand { gap: 0; padding: 5px 10px; background: #fff; border-radius: 10px; }
+    .brand-logo { display:block; width: 190px; height: 54px; object-fit: contain; }
     .nav-links { display: flex; align-items: center; gap: 29px; font-size: 13px; color: #d4dbea; }
     .nav-links a:hover { color: white; }
     .nav-cta { padding: 10px 17px; border-radius: 999px; background: white; color: var(--navy)!important; font-weight: 750; }
@@ -56,7 +59,8 @@
     .services { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
     .service { background:white; border:1px solid var(--line); border-radius:var(--radius); padding:26px; box-shadow:0 5px 20px rgba(16,24,40,.025); transition:.2s; }
     .service:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
-    .service-icon { width:48px; height:48px; border-radius:15px; background:var(--soft); color:var(--blue); display:grid; place-items:center; font-size:22px; margin-bottom:20px; }
+    .service-icon { width:48px; height:48px; border-radius:15px; background:var(--soft); color:var(--blue); display:grid; place-items:center; font-size:21px; margin-bottom:20px; }
+    .service-icon i { line-height:1; }
     .service h3 { margin:0 0 9px; font-size:18px; letter-spacing:-.3px; }
     .service p { color:var(--muted); font-size:14px; margin:0; }
     .service ul { padding-left:18px; margin:14px 0 0; color:#475467; font-size:13px; }
@@ -96,7 +100,8 @@
     .contact-box p { color:var(--muted); margin:0; max-width:560px; }
     footer { background:#080e19; color:#b5c0d0; padding:28px 0; font-size:12px; }
     .footer-inner { display:flex; justify-content:space-between; align-items:center; gap:18px; }
-    .footer-brand { display:inline-block; padding:4px 8px; background:#fff; border-radius:8px; }\n    .footer-brand img { display:block; width:170px; height:48px; object-fit:contain; }
+    .footer-brand { display:inline-block; padding:4px 8px; background:#fff; border-radius:8px; }
+    .footer-brand img { display:block; width:170px; height:48px; object-fit:contain; }
 
     /* Brand motion and compact expertise strip */
     .brand-logo { animation: logoFloat 5s ease-in-out infinite; }
@@ -114,6 +119,7 @@
     .expertise-item:hover { transform:translateY(-5px); box-shadow:0 13px 30px rgba(16,24,40,.09); border-color:#9bb8ff; }
     .expertise-item b { font-size:12px; line-height:1.35; }
     .expertise-icon { font-size:25px; color:#326bff; line-height:1; }
+    .expertise-icon i { display:block; }
     .oracle-item { background:#fff7f5; border-color:#ffd1c9; box-shadow:inset 0 0 0 1px rgba(180,35,24,.04); }
     .oracle-word { color:#c62828; font-weight:900; font-size:21px; letter-spacing:-1.2px; line-height:1; }
     .oracle-service { border-color:#ffd1c9; background:linear-gradient(145deg,#fff,#fff8f6); }
@@ -138,7 +144,9 @@
     }
     @media (max-width:640px) {
       .container { width:min(100% - 32px,1160px); }
-      nav { height:68px; }\n      .brand { padding: 3px 7px; }\n      .brand-logo { width: 155px; height: 44px; }
+      nav { height:68px; }
+      .brand { padding: 3px 7px; }
+      .brand-logo { width: 155px; height: 44px; }
       .menu-btn { display:block; }
       .nav-links { display:none; position:absolute; top:68px; left:0; right:0; padding:18px 22px 22px; background:#0b1220; flex-direction:column; align-items:stretch; gap:18px; border-top:1px solid #26344a; }
       .nav-links.open { display:flex; }
@@ -195,12 +203,12 @@
       <div class="container">
         <div class="section-head"><div class="kicker">What we do</div><h2>Technology services that move your business forward.</h2><p>From a focused application to a modern data platform, we bring engineering, practical thinking and delivery discipline to every engagement.</p></div>
         <div class="services">
-          <article class="service oracle-service"><div class="service-icon">◉</div><h3>Oracle Technology Services</h3><p>Enterprise database, application and cloud capabilities for reliable business systems.</p><ul><li>Oracle Database, SQL and PL/SQL</li><li>Oracle APEX and database development</li><li>Oracle Cloud Infrastructure (OCI)</li></ul></article>
-          <article class="service"><div class="service-icon">⌘</div><h3>Custom Software Development</h3><p>Design and build secure, scalable applications tailored to your workflows and customers.</p><ul><li>Web & mobile applications</li><li>Backend systems and APIs</li><li>Product development and modernization</li></ul></article>
-          <article class="service"><div class="service-icon">▤</div><h3>Data Engineering & Analytics</h3><p>Build dependable data foundations that make information useful, accessible and actionable.</p><ul><li>ETL / ELT pipelines and data warehouses</li><li>Database design and optimization</li><li>Dashboards, reporting and KPIs</li></ul></article>
-          <article class="service"><div class="service-icon">☁</div><h3>Cloud & DevOps</h3><p>Modernize infrastructure and streamline delivery with automation and cloud-native practices.</p><ul><li>AWS, Microsoft Azure and OCI</li><li>Docker, CI/CD and Terraform</li><li>Monitoring, reliability and security</li></ul></article>
-          <article class="service"><div class="service-icon">✧</div><h3>GenAI & Chatbot Solutions</h3><p>Build intelligent conversational experiences and AI-powered workflows that help customers and teams get more done.</p><ul><li>AI chatbots and virtual assistants</li><li>LLM, RAG and knowledge-base solutions</li><li>Workflow automation and AI integrations</li></ul></article>
-          <article class="service"><div class="service-icon">⇄</div><h3>IT Consulting & Integration</h3><p>Get experienced engineering guidance to make sound architecture and technology decisions.</p><ul><li>Solution architecture</li><li>API and enterprise integration</li><li>Technical assessments and support</li></ul></article>
+          <article class="service oracle-service"><div class="service-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div><h3>Oracle Technology Services</h3><p>Enterprise database, application and cloud capabilities for reliable business systems.</p><ul><li>Oracle Database, SQL and PL/SQL</li><li>Oracle APEX and database development</li><li>Oracle Cloud Infrastructure (OCI)</li></ul></article>
+          <article class="service"><div class="service-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div><h3>Custom Software Development</h3><p>Design and build secure, scalable applications tailored to your workflows and customers.</p><ul><li>Web & mobile applications</li><li>Backend systems and APIs</li><li>Product development and modernization</li></ul></article>
+          <article class="service"><div class="service-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div><h3>Data Engineering & Analytics</h3><p>Build dependable data foundations that make information useful, accessible and actionable.</p><ul><li>ETL / ELT pipelines and data warehouses</li><li>Database design and optimization</li><li>Dashboards, reporting and KPIs</li></ul></article>
+          <article class="service"><div class="service-icon"><i class="fa-solid fa-cloud" aria-hidden="true"></i></div><h3>Cloud & DevOps</h3><p>Modernize infrastructure and streamline delivery with automation and cloud-native practices.</p><ul><li>AWS, Microsoft Azure and OCI</li><li>Docker, CI/CD and Terraform</li><li>Monitoring, reliability and security</li></ul></article>
+          <article class="service"><div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div><h3>GenAI & Chatbot Solutions</h3><p>Build intelligent conversational experiences and AI-powered workflows that help customers and teams get more done.</p><ul><li>AI chatbots and virtual assistants</li><li>LLM, RAG and knowledge-base solutions</li><li>Workflow automation and AI integrations</li></ul></article>
+          <article class="service"><div class="service-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div><h3>IT Consulting & Integration</h3><p>Get experienced engineering guidance to make sound architecture and technology decisions.</p><ul><li>Solution architecture</li><li>API and enterprise integration</li><li>Technical assessments and support</li></ul></article>
         </div>
       </div>
     </section>
@@ -210,9 +218,9 @@
         <div class="statement"><div class="eyebrow">The Duniya approach</div><div class="quote">Good technology should solve today's problems and create tomorrow's opportunities.</div><p style="color:#b8c6db;max-width:310px;margin-top:20px;position:relative;z-index:1">We combine engineering experience with a learning mindset to deliver outcomes that last.</p><small>— Duniya Solutions</small></div>
         <div><div class="kicker">Why work with us</div><h2>Practical expertise.<br>Thoughtful delivery.</h2><p style="color:var(--muted)">We focus on understanding the business first, choosing the right tools second, and delivering measurable value throughout the journey.</p>
           <div class="check-list">
-            <div class="check"><div class="check-mark">✓</div><div><b>End-to-end engineering</b><span>From discovery and architecture through development, deployment and support.</span></div></div>
-            <div class="check"><div class="check-mark">✓</div><div><b>Modern, proven technologies</b><span>Solutions shaped around the right platform, not a one-size-fits-all stack.</span></div></div>
-            <div class="check"><div class="check-mark">✓</div><div><b>Learning built into delivery</b><span>Knowledge sharing and hands-on training help teams grow with the solution.</span></div></div>
+            <div class="check"><div class="check-mark"><i class="fa-solid fa-check" aria-hidden="true"></i></div><div><b>End-to-end engineering</b><span>From discovery and architecture through development, deployment and support.</span></div></div>
+            <div class="check"><div class="check-mark"><i class="fa-solid fa-check" aria-hidden="true"></i></div><div><b>Modern, proven technologies</b><span>Solutions shaped around the right platform, not a one-size-fits-all stack.</span></div></div>
+            <div class="check"><div class="check-mark"><i class="fa-solid fa-check" aria-hidden="true"></i></div><div><b>Learning built into delivery</b><span>Knowledge sharing and hands-on training help teams grow with the solution.</span></div></div>
           </div>
         </div>
       </div>
@@ -223,11 +231,11 @@
         <div class="section-head"><div class="kicker">Our expertise</div><h2>Technology that creates real-world impact.</h2><p>Enterprise platforms, modern engineering and intelligent solutions — delivered with practical expertise.</p></div>
         <div class="expertise-strip">
           <div class="expertise-item oracle-item"><span class="oracle-word">ORACLE</span><b>Oracle Technologies</b></div>
-          <div class="expertise-item"><span class="expertise-icon">✧</span><b>GenAI & Chatbots</b></div>
-          <div class="expertise-item"><span class="expertise-icon">⌘</span><b>Application Development</b></div>
-          <div class="expertise-item"><span class="expertise-icon">▤</span><b>Data Engineering</b></div>
-          <div class="expertise-item"><span class="expertise-icon">☁</span><b>Cloud & DevOps</b></div>
-          <div class="expertise-item"><span class="expertise-icon">◎</span><b>Technology Training</b></div>
+          <div class="expertise-item"><span class="expertise-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span><b>GenAI & Chatbots</b></div>
+          <div class="expertise-item"><span class="expertise-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></span><b>Application Development</b></div>
+          <div class="expertise-item"><span class="expertise-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></span><b>Data Engineering</b></div>
+          <div class="expertise-item"><span class="expertise-icon"><i class="fa-solid fa-cloud" aria-hidden="true"></i></span><b>Cloud & DevOps</b></div>
+          <div class="expertise-item"><span class="expertise-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span><b>Technology Training</b></div>
         </div>
       </div>
     </section>
