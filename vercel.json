@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "duniyasolutions.in"
+        }
+      ],
+      "destination": "https://www.duniyasolutions.in/:path*",
+      "permanent": true
+    }
+  ]
+}
